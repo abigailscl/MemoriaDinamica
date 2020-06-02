@@ -1,10 +1,17 @@
 /******************************************************************
 *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE              *
-* CARRERA: Ingenieria de Software                                 *
+* CARRERA: Ingenieria de Software
+* AUTOR: Cabascango Abigail		                                  *
 * SEMESTRE: Tercer semestre                                       *
 * MATERIA: Estructura de Datos                                    *
 * NRC: 6396                                                       *
 ******************************************************************/
+////////////////////////////////////////////////////////////////////////
+// Name:       main(int argc, char *argv[])
+// Purpose:    Ejecucion del programa, calcular MCD Y MCM de un vector y potencia de MATRICES
+// Return:     int
+////////////////////////////////////////////////////////////////////////
+
 #include<iostream>
 #include "OperacionVenctor.h"
 #include "OperacionMatriz.h"
@@ -12,6 +19,8 @@
 #include <stdio.h>
 
 using namespace std;
+
+
 void ingresarValoresVec(int* vector, int dim);
 int dimensionarVec(int dim);
 int dimensionarMatriz(int dim);
@@ -21,16 +30,16 @@ void ingresarValoresMat(int** matriz, int dim);
  int main(int argc, char *argv[])
  {
  	int dimension = 0;
- 	
+ 	cout<<"\n\nVECTORES DIAMICOS\n\n";
 	Vectores objVec;
-/*	dimension = dimensionarVec(dimension);
+	dimension = dimensionarVec(dimension);
 	int* vec = new int [dimension];
 	ingresarValoresVec(vec,dimension);
 	objVec.ordenarVector(vec,dimension);
 	objVec.imprimirVector(vec, dimension);
 	objVec.calcMCM(vec, dimension);
 	objVec.calcMCD(vec,dimension);
-	*/
+	cout<<"\n\nMATRICES DINAMICAS\n\n";
 	Matrices objMatriz;
 	dimension = dimensionarMatriz(dimension);
 	 int ** matriz;
@@ -45,8 +54,10 @@ void ingresarValoresMat(int** matriz, int dim);
 	matriz = objMatriz.multiplicarMatriz(matriz, dimension, potencia);
 	cout <<"\n\n Matriz elevada a "<< dimension<< ": "<< endl;
 	objMatriz.imprimirMatriz(matriz, dimension);
- 	cout<<"\nEjecucion exitosa";
- //	delete(vec);
+	
+ 	//cout<<"\nEjecucion exitosa";
+ 	delete(vec);
+ 	delete(matriz);
 	return 0;
  }
  void ingresarValoresMat(int** matriz, int dim)

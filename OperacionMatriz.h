@@ -1,6 +1,13 @@
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE              *
+* CARRERA: Ingenieria de Software                                 *
+* SEMESTRE: Tercer semestre                                       *
+* MATERIA: Estructura de Datos                                    *
+* NRC: 6396                                                       *
+******************************************************************/
 /***********************************************************************
  * Module:  Matrices.h
- * Author:  Abigail
+ * Author:  Abigail Cabascango
  * Modified: lunes, 1 de junio de 2020 18:49:56
  * Purpose: Declaration of the class Matrices
  ***********************************************************************/
