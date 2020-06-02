@@ -116,22 +116,22 @@ void Vectores::calcMCM(int* vector, int dim)
 ////////////////////////////////////////////////////////////////////////
 void Vectores::calcMCD(int* vector, int dim)
 {
-	int cont = 0, j =0;
-	int mcd = 0, res = 0;
-	for(int i = 1; i < mayor; i++)
+	for(int i = 1; i < dim; i++)
 	{
-			i++;
-			cont =	(*(vector+j));
-			j++;
-		if(i ==0){
+		
+		cont =	(*(vector+j));
+		j++;
+		if(i == 1){
 			mcd = cont ;	
-		}
-		do{
+		}else{
+			do{
 			res = mcd%cont;
 			mcd = cont;
 			cont = res;
 			
 		}while(res!=0);
+		}
+	
 	}
 	
 	cout<< "\nMCD = "<< mcd;
