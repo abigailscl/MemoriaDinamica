@@ -123,7 +123,6 @@ void Vectores::calcMCD(int* vector, int dim)
 		
 		cont = *(vector+i-1);
 		
-		cout<< "holi "<<cont;
 		if(i == 1){
 			mcd = cont ;	
 		}
