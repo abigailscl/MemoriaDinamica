@@ -29,16 +29,7 @@ void ingresarValoresMat(int** matriz, int dim);
 
  int main(int argc, char *argv[])
  {
- 	int dimension = 0;
- 	cout<<"\n\nVECTORES DIAMICOS\n\n";
-	Vectores objVec;
-	dimension = dimensionarVec(dimension);
-	int* vec = new int [dimension];
-	ingresarValoresVec(vec,dimension);
-	objVec.ordenarVector(vec,dimension);
-	objVec.imprimirVector(vec, dimension);
-	objVec.calcMCM(vec, dimension);
-	objVec.calcMCD(vec,dimension);
+ 	int dimension = 0;		
 	cout<<"\n\nMATRICES DINAMICAS\n\n";
 	Matrices objMatriz;
 	dimension = dimensionarMatriz(dimension);
@@ -54,6 +45,16 @@ void ingresarValoresMat(int** matriz, int dim);
 	matriz = objMatriz.multiplicarMatriz(matriz, dimension, potencia);
 	cout <<"\n\n Matriz elevada a "<< dimension<< ": "<< endl;
 	objMatriz.imprimirMatriz(matriz, dimension);
+	cout << " \ n \ n VECTORES DIAMICOS \ n \ n " ;
+	Vectores objVec;
+	dimension = dimensionarVec (dimensión);
+	int * vec = new  int [dimensión];
+	ingresarValoresVec (vec, dimensión);
+	objVec. ordenarVector (vec, dimensión);
+	objVec. imprimirVector (vec, dimensión);
+	 objVec.calcMCD(vec,dimension);
+	objVec. calcMCM (vec, dimensión);
+	 
 	
  	//cout<<"\nEjecucion exitosa";
  	delete(vec);
