@@ -7,11 +7,11 @@
 
 #if !defined(__ModeloMemoriaDinamica_Vectores_h)
 #define __ModeloMemoriaDinamica_Vectores_h
-#include "IngresoDatos.h"
+#include<iostream>
 #include <string> 
 #include <stdio.h> 
  #include <cstdlib>
-  
+using namespace std;
 class Vectores
 {
 public:
@@ -25,7 +25,6 @@ public:
    void ordenarVector(int* vector, int dim);
    void calcMCM(int* vector, int dim);
    void calcMCD(int* vector, int dim);
-   void ingresarValores2(int* vector, int dim);
 
 
 protected:
@@ -35,8 +34,6 @@ private:
 	int maxArr(int *vector, int dim);
    int menor;
    int mayor;
-
-
 };
 
   Vectores::Vectores(){
@@ -103,16 +100,6 @@ void Vectores::calcMCD(int* vector, int dim)
 	}
 	
 	cout<< "\nMCD = "<< mcd;
-}
-void Vectores::ingresarValores2(int *vector, int dim)
-{
-	cout<<"ingreso clase vector";
-	IngresoDatos objIng;
-	for (int i = 0; i < dim; i++){
-		
-		*(vector+i) = atoi(objIng.ingresar(i).c_str());	
-	}
- 	 
 }
 
 unsigned long int Vectores::mcm(int *vector, int dim){

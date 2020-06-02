@@ -3,12 +3,18 @@
 #include <string.h>
 
 using namespace std;
+class Matrices;
 class Validaciones
 {
 	public:
+		Validaciones();
 		bool validar(string , int );
 	
 };
+Validaciones::Validaciones()
+{
+	
+}
 bool Validaciones::validar(string cadena, int tipo) {
 int contador = 0;
 	try {

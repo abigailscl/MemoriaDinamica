@@ -19,7 +19,7 @@ string IngresoDatos::ingresar(int i){
  	cin >> entrada;
  	while (val.validar(entrada, 2))
  	{
- 		cout << "\nIngreso herroneo: ";
+ 		cout << "\nIngreso herroneo vuelva a ingresar: ";
  		cin >> entrada;
 	 }
 	 return entrada;
@@ -27,11 +27,11 @@ string IngresoDatos::ingresar(int i){
 string IngresoDatos::ingresar(){
 	Validaciones val;
  	string entrada;
- 	cout<< "\nIngrese valor:"  ;
+ 	cout<< "\nIngrese dimension:"  ;
  	cin >> entrada;
  	while (val.validar(entrada, 2))
  	{
- 		cout << "\nIngreso herroneo: ";
+ 		cout << "\nIngreso herroneo vuelva a ingresar: ";
  		cin >> entrada;
 	 }
 	 return entrada;
@@ -43,7 +43,7 @@ string IngresoDatos::ingresar(int i, int j){
  	cin >> entrada;
  	while (val.validar(entrada, 2))
  	{
- 		cout << "\nIngreso herroneo: ";
+ 		cout << "\nIngreso herroneo vuelva a ingresar: ";
  		cin >> entrada;
 	 }
 	 return entrada;
