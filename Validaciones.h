@@ -9,8 +9,7 @@ class Validaciones
 		bool validar(string , int );
 	
 };
-bool Validaciones::validar(string cadena, int tipo) 
-{
+bool Validaciones::validar(string cadena, int tipo) {
 int contador = 0;
 	try {
 		for (int i = 0; i < cadena.length(); i++) {
@@ -20,8 +19,11 @@ int contador = 0;
 			if (!isdigit(cadena[i]) && tipo == 1) {
 				throw 1;
 			}
-			if (cadena[i] == '.') {
+			if (cadena[i] == '.' || tipo == 1) {
 				contador++;
+			}
+			if (cadena[i] == '.' && tipo == 2) {
+				throw 1;
 			}
 			if ((isdigit(cadena[i]) == 0 && cadena[i] != '.' && cadena[i] != '-') || (contador>1)) {				
 				throw 1;
