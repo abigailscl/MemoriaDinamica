@@ -39,12 +39,22 @@ private:
 
 
 };
+////////////////////////////////////////////////////////////////////////
+// Name:        Matrices::Matrices( )
+// Purpose:    Constructor of  class   Matrices
+// Parameters: 
+////////////////////////////////////////////////////////////////////////
 Matrices::Matrices( )
 {
 	
 }
 
-
+////////////////////////////////////////////////////////////////////////
+// Name:     Matrices::segmentarMemoria(int dim)
+// Purpose:    Implementation of Matrices::segmentarMemoria(int dim)
+// Parameters:	int dim
+// Return:     int**
+////////////////////////////////////////////////////////////////////////
 int** Matrices::segmentarMemoria(int dim)
 {
 	int **m , j;
@@ -58,6 +68,12 @@ int** Matrices::segmentarMemoria(int dim)
 	return m;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:     Matrices::encerarMatriz(int** matriz, int dim) 
+// Purpose:    Implementation of  Matrices::encerarMatriz(int** matriz, int dim) 
+// Parameters:	int** matriz, int dim
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void Matrices::encerarMatriz(int** matriz, int dim) 
 {
 		for(int i=0;i<dim;i++)
@@ -71,6 +87,12 @@ void Matrices::encerarMatriz(int** matriz, int dim)
 	
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:     Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
+// Purpose:    Implementation of  Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
+// Parameters:	int** matriz, int dim, int potencia
+// Return:     int**
+////////////////////////////////////////////////////////////////////////
 int** Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
 {
 	if(potencia == 1){
@@ -91,6 +113,13 @@ int** Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
 	
 	return matrizResult;
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:     Matrices::imprimirMatriz(int**matriz, int dim)
+// Purpose:    Implementation of  Matrices::imprimirMatriz(int**matriz, int dim) 
+// Parameters:	int** matriz, int dim
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void Matrices::imprimirMatriz(int**matriz, int dim)
 {
 		for(int i=0;i<dim;i++){
