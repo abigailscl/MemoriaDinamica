@@ -116,21 +116,25 @@ void Vectores::calcMCM(int* vector, int dim)
 ////////////////////////////////////////////////////////////////////////
 void Vectores::calcMCD(int* vector, int dim)
 {
-	for(int i = 1; i < dim; i++)
+	int cont = 0, j =0;
+	int mcd = 0, res = 0;
+	for(int i = 1; i <= dim; i++)
 	{
 		
-		cont =	(*(vector+j));
-		j++;
+		cont = *(vector+i-1);
+		
+		cout<< "holi "<<cont;
 		if(i == 1){
 			mcd = cont ;	
-		}else{
-			do{
+		}
+		
+		do{
 			res = mcd%cont;
 			mcd = cont;
 			cont = res;
 			
 		}while(res!=0);
-		}
+		
 	
 	}
 	
