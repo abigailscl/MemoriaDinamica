@@ -34,17 +34,24 @@ void ingresarValoresMat(int** matriz, int dim);
 	Matrices objMatriz;
 	dimension = dimensionarMatriz(dimension);
 	 int ** matriz;
-	 objMatriz.encerarMatriz(matriz, dimension);
 	matriz = objMatriz.segmentarMemoria(dimension);
-		cout<< "ingreso matrices";
+	objMatriz.encerarMatriz(matriz, dimension);
+		cout<< "\n\n Ingresar Valores de matriz:"<< endl;
 	ingresarValoresMat(matriz,  dimension);
+		IngresoDatos objIng;
+	int potencia = atoi(objIng.ingresar("\nPotencia: ").c_str());
+	cout <<"\n\n Matriz :"<< endl;
+	objMatriz.imprimirMatriz(matriz, dimension);
+	matriz = objMatriz.multiplicarMatriz(matriz, dimension, potencia);
+	cout <<"\n\n Matriz elevada a "<< dimension<< ": "<< endl;
+	objMatriz.imprimirMatriz(matriz, dimension);
  	cout<<"\nEjecucion exitosa";
  //	delete(vec);
 	return 0;
  }
  void ingresarValoresMat(int** matriz, int dim)
 {
-	cout<< "ingreso matrices";
+
 		IngresoDatos objIng;
 
 	for(int i=0;i<dim;i++)

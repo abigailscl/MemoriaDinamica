@@ -22,7 +22,8 @@ public:
    void setMatrizResult(int** newMatrizResult);
    int ** segmentarMemoria(int dim);
    int** multiplicarMatriz(int** matriz, int dim, int potencia);
-   void encerarMatriz(int** matriz, int dim);
+   void encerarMatriz(int** matriz, int dim);	
+   void imprimirMatriz(int** matriz, int dim);
 
 protected:
 private:
@@ -65,8 +66,10 @@ void Matrices::encerarMatriz(int** matriz, int dim)
 
 int** Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
 {
-	
-	while(potencia!=1){
+	if(potencia == 1){
+		matrizResult = matriz;
+	}else{
+			while(potencia!=1){
 			for(int i=0;i<dim;i++){
 			for(int j=0;j<dim;j++){
 			for(int h=0;h<dim;h++){
@@ -76,7 +79,19 @@ int** Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
 		}
 		potencia --;
 	}
+	}
+
 	
 	return matrizResult;
+}
+void Matrices::imprimirMatriz(int**matriz, int dim)
+{
+		for(int i=0;i<dim;i++){
+		for(int j=0;j<dim;j++)
+		{
+			cout << (*(*(matriz+i)+j)) << " ";
+		}
+		cout <<"\n";
+	}
 }
 #endif

@@ -6,6 +6,7 @@ class IngresoDatos{
 		IngresoDatos();
 		string ingresar(int i);
 		string ingresar();
+		string ingresar(string mensage);
 		string ingresar(int i, int j);
 };
  IngresoDatos::IngresoDatos()
@@ -27,9 +28,21 @@ string IngresoDatos::ingresar(int i){
 string IngresoDatos::ingresar(){
 	Validaciones val;
  	string entrada;
- 	cout<< "\nIngrese dimension:"  ;
+ 	cout<< "\nIngrese dimendion:"  ;
  	cin >> entrada;
- 	while (val.validar(entrada, 2))
+ 	while (val.validar(entrada, 3))
+ 	{
+ 		cout << "\nIngreso herroneo vuelva a ingresar: ";
+ 		cin >> entrada;
+	 }
+	 return entrada;
+}
+string IngresoDatos::ingresar(string mensage){
+	Validaciones val;
+ 	string entrada;
+ 	cout<< mensage ;
+ 	cin >> entrada;
+ 	while (val.validar(entrada, 3))
  	{
  		cout << "\nIngreso herroneo vuelva a ingresar: ";
  		cin >> entrada;

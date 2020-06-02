@@ -31,6 +31,12 @@ int contador = 0;
 			if (cadena[i] == '.' && tipo == 2) {
 				throw 1;
 			}
+			if (cadena[i] == '-' && tipo == 3) {
+				throw 1;
+			}
+			if (cadena[i] == '.' && tipo == 3) {
+				throw 1;
+			}
 			if ((isdigit(cadena[i]) == 0 && cadena[i] != '.' && cadena[i] != '-') || (contador>1)) {				
 				throw 1;
 			}			
