@@ -8,6 +8,10 @@
 #if !defined(__ModeloMemoriaDinamica_Vectores_h)
 #define __ModeloMemoriaDinamica_Vectores_h
 #include "IngresoDatos.h"
+#include <string> 
+#include <stdio.h> 
+ #include <cstdlib>
+  
 class Vectores
 {
 public:
@@ -20,9 +24,8 @@ public:
    void encerarVector(int* vector, int dim);
    void ordenarVector(int* vector, int dim);
    void imprimirMaxMin(int* vector, int dim);
-   void ingresarValores(int* vector, int dim);
+   void ingresarValores2(int* vector, int dim);
 
-   Matrices** matrices;
 
 protected:
 private:
@@ -31,9 +34,16 @@ private:
 
 
 };
+
+  Vectores::Vectores(){
+   	
+   }
 void Vectores::imprimirVector(int* vector, int dim)
 {
-	
+	for (int i = 0; i < dim; i++){
+		
+		cout << <*(vector+i)<< ", " ;
+	}
 }
 void Vectores:: encerarVector(int* vector, int dim)
 {
@@ -47,13 +57,16 @@ void Vectores::imprimirMaxMin(int* vector, int dim)
 {
 	
 }
-void Vectores::ingresarValores(int* vector, int dim)
+void Vectores::ingresarValores2(int *vector, int dim)
 {
+	cout<<"ingreso clase vector";
 	IngresoDatos objIng;
-	for (int i = 0; i < dim)
- 	 objIng.ingresar(i);
+	for (int i = 0; i < dim; i++){
+		
+		*(vector+i) = atoi(objIng.ingresar(i).c_str());	
+	}
+ 	 
 }
-
 
 
 

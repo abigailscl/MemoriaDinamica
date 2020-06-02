@@ -40,6 +40,7 @@ void Matrices::ingresarValores(int** matriz, int dim)
 }
 int** Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
 {
+	
 	return matrizResult;
 }
 #endif

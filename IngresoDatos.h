@@ -3,10 +3,15 @@
 using namespace std;
 class IngresoDatos{
 	public:
+		IngresoDatos();
 		string ingresar(int i);
-		void ingresar();
+		string ingresar();
 		string ingresar(int i, int j);
 };
+ IngresoDatos::IngresoDatos()
+{
+	
+}
 string IngresoDatos::ingresar(int i){
 	Validaciones val;
  	string entrada;
@@ -19,7 +24,7 @@ string IngresoDatos::ingresar(int i){
 	 }
 	 return entrada;
 }
-void IngresoDatos::ingresar(){
+string IngresoDatos::ingresar(){
 	Validaciones val;
  	string entrada;
  	cout<< "\nIngrese valor:"  ;
