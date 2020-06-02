@@ -24,10 +24,23 @@ class Validaciones
 		bool validar(string , int );
 	
 };
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Validaciones::Validaciones()
+// Purpose:    Constructor of  class Validaciones
+// Parameters: 
+////////////////////////////////////////////////////////////////////////
 Validaciones::Validaciones()
 {
 	
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:      Validaciones::validar(string cadena, int tipo) 
+// Purpose:    Implementation of  Validaciones::validar(string cadena, int tipo) 
+// Parameters: string cadena, int tipo
+// Return:     bool
+////////////////////////////////////////////////////////////////////////
 bool Validaciones::validar(string cadena, int tipo) {
 int contador = 0;
 	try {
