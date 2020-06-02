@@ -44,9 +44,10 @@ private:
    }
 void Vectores::imprimirVector(int* vector, int dim)
 {
+	cout<< "\nEl vector ordenado es: ";
 	for (int i = 0; i < dim; i++){
 		
-		cout << *(vector+i) << "; ";
+		cout << *(vector+i) << " ";
 	}
 }
 void Vectores:: encerarVector(int* vector, int dim)
@@ -58,12 +59,50 @@ void Vectores:: encerarVector(int* vector, int dim)
 }
 void Vectores::ordenarVector(int* vector, int dim)
 {
-	
+	 int i, j, aux;
+	for(i = 0; i < dim; i++)
+    {
+        for (j = i + 1; j < dim; j++)
+    	{
+            if(*(vector+i)> *(vector+j))
+            {
+                aux = *(vector+i);
+                *(vector+i) = *(vector+j);
+                *(vector+j) = aux;
+            }
+    	}	
+    }
+	mayor = *(vector+dim-1);
+	menor = *(vector+0);   
+	cout<< "\n Numero mayor: "<< mayor;
+	cout<<"\n Numero menor: "<< menor;
 }
 void Vectores::calcMCM(int* vector, int dim)
 {
 	cout << "\nMCM = " << mcm(vector,dim);
 	
+}
+void Vectores::calcMCD(int* vector, int dim)
+{
+	int cont = 0, j =0;
+	int mcd = 0, res = 0;
+	for(int i = 1; i < mayor; i++)
+	{
+			i++;
+			cont =	(*(vector+j));
+			j++;
+		if(i ==0){
+			mcd = cont ;	
+		}
+		do{
+			res = mcd%cont;
+			mcd = cont;
+			cont = res;
+			
+		}while(res!=0);
+	}
+	
+	cout<< "\nMCD = "<< mcd;
 }
 void Vectores::ingresarValores2(int *vector, int dim)
 {
@@ -99,7 +138,8 @@ bool Vectores::esDivisible(int *vector, int dim, int numero){
 	}
 	return divisible;
 }
-int Vectores::maxArr(int *vector, int dim){
+int Vectores::maxArr(int *vector, int dim)
+{
 	int max = -1;
 	if( dim > 1 ){
 		max = *(vector+0);
