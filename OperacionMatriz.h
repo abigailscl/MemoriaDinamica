@@ -36,8 +36,6 @@ protected:
 private:
    int** matrizResult ;
    int dimen;
-
-
 };
 ////////////////////////////////////////////////////////////////////////
 // Name:        Matrices::Matrices( )
@@ -76,14 +74,12 @@ int** Matrices::segmentarMemoria(int dim)
 ////////////////////////////////////////////////////////////////////////
 void Matrices::encerarMatriz(int** matriz, int dim) 
 {
-		for(int i=0;i<dim;i++)
-	{
-		for(int j=0;j<dim;j++)
-		{
-			(*(*(matriz+i)+j)) = 0;
-			(*(*(matrizResult+i)+j)) = 0;
+		for(int i=0;i<dim;i++){
+			for(int j=0;j<dim;j++){
+				(*(*(matriz+i)+j)) = 0;
+				(*(*(matrizResult+i)+j)) = 0;
+			}
 		}
-	}
 	
 }
 
@@ -99,17 +95,16 @@ int** Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
 		matrizResult = matriz;
 	}else{
 			while(potencia!=1){
-			for(int i=0;i<dim;i++){
-			for(int j=0;j<dim;j++){
-			for(int h=0;h<dim;h++){
-				*(*(matrizResult+i)+j)=*(*(matrizResult+i)+j)+(*(*(matriz+i)+h))*(*(*(matriz+h)+j));
+				for(int i=0;i<dim;i++){
+					for(int j=0;j<dim;j++){
+						for(int h=0;h<dim;h++){
+							*(*(matrizResult+i)+j)=*(*(matrizResult+i)+j)+(*(*(matriz+i)+h))*(*(*(matriz+h)+j));
+						}
+					}
 				}
+				potencia--;
 			}
-		}
-		potencia --;
 	}
-	}
-
 	
 	return matrizResult;
 }
@@ -123,11 +118,10 @@ int** Matrices::multiplicarMatriz(int** matriz, int dim, int potencia)
 void Matrices::imprimirMatriz(int**matriz, int dim)
 {
 		for(int i=0;i<dim;i++){
-		for(int j=0;j<dim;j++)
-		{
-			cout << (*(*(matriz+i)+j)) << " ";
+			for(int j=0;j<dim;j++){
+				cout << (*(*(matriz+i)+j)) << " ";
+			}
+			cout <<"\n";
 		}
-		cout <<"\n";
-	}
 }
 #endif
