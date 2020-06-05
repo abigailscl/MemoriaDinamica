@@ -1,0 +1,14 @@
+﻿  Operation.cpp
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Validacion.h(32,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Validacion.h(47,13): warning C4101: 'e': unreferenced local variable
+  Unidimension.cpp
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Validacion.h(32,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Validacion.h(47,13): warning C4101: 'e': unreferenced local variable
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Ingreso.h(13,15): error C2011: 'Ingreso': 'class' type redefinition
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Ingreso.h(13): message : see declaration of 'Ingreso'
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Ingreso.h(18,17): error C2027: use of undefined type 'Ingreso'
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Ingreso.h(13): message : see declaration of 'Ingreso'
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Unidimensional.h(101,18): error C2079: 'enter' uses undefined class 'Ingreso'
+C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Unidimension.cpp(12,18): error C2079: 'enter' uses undefined class 'Ingreso'
+  Unidimensional.cpp
+  Generating Code...
