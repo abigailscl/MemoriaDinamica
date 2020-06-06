@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include "Trigonometry.h"
+#include "IngresoDatos.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Trigonometry tr;
+    float value;
+    
+    IngresoDatos enter;
+    
+    value = atof(enter.ingresar("Ingrese el angulo: ").c_str());
+
+    cout << "seno de " << value << " es: " << tr.sin(value) << endl;
+    cout << "coseno de " << value << " es: " << tr.cos(value) << endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

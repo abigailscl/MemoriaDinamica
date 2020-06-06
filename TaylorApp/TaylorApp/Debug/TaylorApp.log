@@ -1,4 +1,7 @@
-﻿  math.cpp
-  TaylorApp.cpp
-  Generating Code...
-  TaylorApp.vcxproj -> C:\Users\Charlie\source\repos\TaylorApp\Debug\TaylorApp.exe
+﻿  TaylorApp.cpp
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\Trigonometry.h(27,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\Trigonometry.h(34,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\Validaciones.h(90,13): warning C4101: 'e': unreferenced local variable
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\TaylorApp.cpp(12,11): warning C4101: 'p': unreferenced local variable
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\Trigonometry.h(28): warning C4717: 'Trigonometry::sin': recursive on all control paths, function will cause runtime stack overflow
+  TaylorApp.vcxproj -> C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\Debug\TaylorApp.exe
