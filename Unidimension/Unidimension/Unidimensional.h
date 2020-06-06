@@ -11,7 +11,7 @@
 #define __unidimensional_UML_Unidimensional_h
 
 #include "Unidimensional.h"
-#include "Ingreso.h"
+#include "IngresoDatos.h"
 #include <iostream>
 #include <sstream>
 #include <stdlib.h>
@@ -98,14 +98,12 @@ void Unidimensional::print() {
  * @param dimension size of array
  */
 void Unidimensional::fill() {
-    Ingreso enter;
+    IngresoDatos enter;
     string str;
     int value;
 
     for (int i = 0; i < getDimension(); i++) {
-        str = enter.leer("Ingrese valor: ", 1);
-        istringstream(str) >> value;
-
+        value = atoi(enter.ingresar(i).c_str());
         *(array + i) = value;
     }
 
