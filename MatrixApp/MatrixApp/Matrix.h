@@ -10,12 +10,10 @@
 #define __Matrices_Matrix_h
 
 #include "Matrix.h"
-#include "Ingreso.h"
-#include "Validacion.h"
+#include "IngresoDatos.h"
 #include <sstream>
 #include <iostream>
-#include <stdlib.h>
-#include "OperationMatrix.h"
+#include <stdlib.h>	
 
 using namespace std;
 
@@ -47,37 +45,27 @@ void Matrix::setDimension(int newDimension) { dimension = newDimension; }
 
 Matrix::Matrix(int dimension) {
 
+	IngresoDatos enter;
 	this->dimension = dimension;
 	matrix = (int**)malloc(dimension * sizeof(int*));
 
-	for (int i = 0; i < dimension; i++) {
+	for (size_t i = 0; i < dimension; i++) {
 		*(matrix + i) = (int*)malloc(dimension * sizeof(int));
 	}
 
 }
 
-Matrix::~Matrix() {
-
-	for (int i = 0; i < getDimension(); i++)
-	{
-		delete[]	*(getMatrix() + i);
-	}
-
-	delete[] getMatrix();
-
-}
+Matrix::~Matrix() {}
 
 void Matrix::fill() {
 
 	string str;
-	Ingreso enter;
+	IngresoDatos enter;
 	int value;
-
-	for (int i = 0; i < getDimension(); i++) {
-		for (int j = 0; j < getDimension(); j++) {
-			cout << "[" << i << "][" << j << "]";
-			str = enter.leer("Ingrese un valor: ", 1);
-			istringstream(str) >> value;
+	wax();
+	for (size_t i = 0; i < getDimension(); i++) {
+		for (size_t j = 0; j < getDimension(); j++) {
+			value = atoi(enter.ingresar(i, j).c_str());
 			*(*(getMatrix() + i) + j) = value;
 		}
 	}
@@ -88,8 +76,8 @@ void Matrix::print() {
 
 	cout << "Matriz resultante:\n";
 
-	for (int i = 0; i < getDimension(); i++) {
-		for (int j = 0; j < getDimension(); j++) {
+	for (size_t i = 0; i < getDimension(); i++) {
+		for (size_t j = 0; j < getDimension(); j++) {
 			cout << *(*(getMatrix() + i) + j) << " ";
 		}
 		cout << "\n";
@@ -99,8 +87,8 @@ void Matrix::print() {
 
 void Matrix::wax() {
 
-	for (int i = 0; i < getDimension(); i++)
-		for (int j = 0; j < getDimension(); j++)
+	for (size_t i = 0; i < getDimension(); i++)
+		for (size_t j = 0; j < getDimension(); j++)
 			*(*(getMatrix() + i) + j) = 0;
 
 }
