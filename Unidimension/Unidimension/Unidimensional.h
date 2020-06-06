@@ -101,7 +101,7 @@ void Unidimensional::fill() {
     IngresoDatos enter;
     string str;
     int value;
-
+    wax();
     for (int i = 0; i < getDimension(); i++) {
         value = atoi(enter.ingresar(i).c_str());
         *(array + i) = value;
