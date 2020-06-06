@@ -1,7 +1,7 @@
 #pragma once
 /***********************************************************************
  * Module:  Matrix.h
- * Author:  Charlie
+ * Author:  Carlos Romero 
  * Modified: Monday, June 1, 2020 15:51:29
  * Purpose: Declaration of the class Matrix
  ***********************************************************************/
@@ -37,12 +37,23 @@ private:
     int **matrix;
     int dimension;
 };
-
+////////////////////////////////////////////////////////////////////////
+// Name:      gett and setters
+// Purpose:    get and set atributes
+// Parameters: int dimension, int ** matrix
+// Return:     int** void
+////////////////////////////////////////////////////////////////////////
 int** Matrix::getMatrix(void) { return matrix; }
 void Matrix::setMatrix(int** newMatrix) { matrix = newMatrix; }
 int Matrix::getDimension(void) { return dimension; }
 void Matrix::setDimension(int newDimension) { dimension = newDimension; }
 
+////////////////////////////////////////////////////////////////////////
+// Name:      Matrix::Matrix(int dimension)
+// Purpose:    Constructor of Matrix::Matrix(int dimension)
+// Parameters: int dimension
+// Return:     
+////////////////////////////////////////////////////////////////////////
 Matrix::Matrix(int dimension) {
 
 	IngresoDatos enter;
@@ -56,7 +67,12 @@ Matrix::Matrix(int dimension) {
 }
 
 Matrix::~Matrix() {}
-
+////////////////////////////////////////////////////////////////////////
+// Name:      void Matrix::fill()
+// Purpose:    Implementation of  void Matrix::fill()
+// Parameters: 
+// Return:    void
+////////////////////////////////////////////////////////////////////////
 void Matrix::fill() {
 
 	string str;
@@ -71,7 +87,12 @@ void Matrix::fill() {
 	}
 
 }
-
+////////////////////////////////////////////////////////////////////////
+// Name:       Matrix::print()
+// Purpose:    Implementation of  void Matrix::print()
+// Parameters: 
+// Return:    void
+////////////////////////////////////////////////////////////////////////
 void Matrix::print() {
 
 	cout << "Matriz resultante:\n";
@@ -84,7 +105,12 @@ void Matrix::print() {
 	}
 
 }
-
+////////////////////////////////////////////////////////////////////////
+// Name:      Matrix::wax() 
+// Purpose:    Implementation of  void Matrix::wax() 
+// Parameters: 
+// Return:    void
+////////////////////////////////////////////////////////////////////////
 void Matrix::wax() {
 
 	for (size_t i = 0; i < getDimension(); i++)
