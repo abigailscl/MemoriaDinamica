@@ -9,7 +9,10 @@
 #if !defined(__unidimensional_UML_Operation_h)
 #define __unidimensional_UML_Operation_h
 
+#include "Operation.h"
 #include "Unidimensional.h"
+
+using namespace std;
 
 class Operation
 {
@@ -22,6 +25,53 @@ protected:
 private:
 
 };
+
+Operation::Operation() {}
+
+/** @fn Operation::mcm(Unidimensional array)
+ * @brief calculate the minimum common multiple
+ * @return Returns the minimun common multiple.
+ */
+int Operation::mcm(Unidimensional array) {
+	int aux = 1;
+	for (size_t i = 0; i < array.getDimension(); i++) {
+		aux *= *(array.getArray() + i);
+	}
+
+	return aux / mcd(array);
+}
+
+/** @fn Operation::mcd(Unidimensional array)
+ * @brief calculate the greatest common divisor
+ * @return Returns the greatest common divisor.
+ */
+int Operation::mcd(Unidimensional array) {
+
+	int mcd = 1, remainder, aux;
+
+	for (size_t i = 0; i < array.getDimension(); i++) {
+		aux = *(array.getArray() + i);
+		if (i == 0) {
+			mcd = aux;
+		}
+		else {
+
+			do {
+				remainder = mcd % aux;
+
+				if (remainder != 0) {
+					mcd = aux;
+					aux = remainder;
+				}
+
+			} while (remainder != 0);
+		}
+
+	}
+
+	return mcd;
+
+}
 
 #endif
 
