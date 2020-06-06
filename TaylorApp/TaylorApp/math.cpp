@@ -11,5 +11,12 @@ long int math::factorial(int value) {
 }
 
 int math::pow(int base, int exponent) {
+	int power;
+	if(exponent==1)
+	{
+	}else{
+		power = base * pow(base,exponent-1)
+	}
+	return power;
 	
 }
