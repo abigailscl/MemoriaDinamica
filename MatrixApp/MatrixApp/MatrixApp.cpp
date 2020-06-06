@@ -1,3 +1,16 @@
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE              *
+* CARRERA: Ingenieria de Software                                 *
+* SEMESTRE: Tercer semestre                                       *
+* MATERIA: Estructura de Datos                                    *
+* NRC: 6396                                                       *
+******************************************************************/
+/***********************************************************************
+ * Module:  main
+ * Author:  Carlos Romero - Abigail Cabascango
+ * Modified: viernes, 5 de junio de 2020 17:51:04
+ * Purpose: Ejecutar el programa
+ ***********************************************************************/
 // MatrixApp.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
@@ -21,7 +34,7 @@ int main()
 
     int times;
     do {
-        times = atoi(enter.ingresar("Ingrese el número de veces que desea multiplicar: ").c_str());
+        times = atoi(enter.ingresar("Ingrese el nÃºmero de veces que desea multiplicar: ").c_str());
     } while (times > 7);
     OperationMatrix operation;
     
