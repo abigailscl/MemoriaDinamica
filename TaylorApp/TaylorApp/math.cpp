@@ -15,7 +15,7 @@ int math::pow(int base, int exponent) {
 	if(exponent==1)
 	{
 	}else{
-		power = base * pow(base,exponent-1)
+		power = base * pow(base,exponent-1);
 	}
 	return power;
 	
