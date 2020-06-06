@@ -11,6 +11,10 @@
  * Modified: domingo, 28 de mayo de 2020 17:51:04
  * Purpose: Ingresar datos por consola
  ***********************************************************************/
+
+#if !defined(__IngresoDatos_h)
+#define __IngresoDatos_h
+
 #include<iostream>
 #include"Validaciones.h"
 using namespace std;
@@ -105,3 +109,4 @@ string IngresoDatos::ingresar(int i, int j){
 	 }
 	 return entrada;
 }
+#endif
