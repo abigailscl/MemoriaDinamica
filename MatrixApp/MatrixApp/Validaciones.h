@@ -73,6 +73,15 @@ int contador = 0;
 			if (cadena[i] == '1' && tipo == 3) {
 				throw 1;
 			}
+			if (cadena[i] == '.' && tipo == 4) {
+				throw 1;
+			}
+			if (cadena[i] == '0' && tipo == 4) {
+				throw 1;
+			}
+			if (cadena[i] == '-' && tipo == 4) {
+				throw 1;
+			}
 			if ((isdigit(cadena[i]) == 0 && cadena[i] != '.' && cadena[i] != '-') || (contador>1)) {				
 				throw 1;
 			}			
