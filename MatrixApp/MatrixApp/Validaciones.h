@@ -11,6 +11,10 @@
  * Modified: domingo, 28 de mayo de 2020 17:51:04
  * Purpose: Validar datos ingresados por consola
  ***********************************************************************/
+
+#if !defined(__Validaciones_h)
+#define __Validaciones_h
+
 #include<iostream>
 #include <ctype.h>
 #include <string.h>
@@ -44,7 +48,7 @@ Validaciones::Validaciones()
 bool Validaciones::validar(string cadena, int tipo) {
 int contador = 0;
 	try {
-		for (int i = 0; i < cadena.length(); i++) {
+		for (size_t i = 0; i < cadena.length(); i++) {
 			if (isalpha(cadena[i])) {
 				throw 1;
 			}
@@ -66,6 +70,9 @@ int contador = 0;
 			if (cadena[i] == '0' && tipo == 3) {
 				throw 1;
 			}
+			if (cadena[i] == '1' && tipo == 3) {
+				throw 1;
+			}
 			if ((isdigit(cadena[i]) == 0 && cadena[i] != '.' && cadena[i] != '-') || (contador>1)) {				
 				throw 1;
 			}			
@@ -76,3 +83,5 @@ int contador = 0;
 	}	
 	return false;
 }
+
+#endif
