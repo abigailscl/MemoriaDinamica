@@ -80,7 +80,7 @@ string IngresoDatos::ingresar(string mensage){
  	string entrada;
  	cout<< mensage ;
  	cin >> entrada;
- 	while (val.validar(entrada, 3))
+ 	while (val.validar(entrada, 4))
  	{
  		cout << "\nIngreso equivocado vuelva a ingresar: ";
  		cin >> entrada;
