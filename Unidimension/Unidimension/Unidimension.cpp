@@ -3,23 +3,22 @@
 
 #include <iostream>
 #include <sstream>
-#include "Ingreso.h"
+#include "IngresoDatos.h"
 #include "Unidimensional.h"
 #include "Operation.h"
 
 int main()
 {
-    Ingreso enter;
+    IngresoDatos enter;
     
     Operation operation;
-    string str;
+    
     int dimension;
 
-    str = enter.leer("Ingrese el tamaño del arreglo: ", 1);
-    istringstream(str) >> dimension;
+    dimension = atoi(enter.ingresar().c_str());
+    
     Unidimensional arr(dimension);
-        
-    arr.wax();
+            
     arr.fill();
     arr.print();
     cout << "\nEl minimo comun multiplo es: " << operation.mcm(arr) << endl;
