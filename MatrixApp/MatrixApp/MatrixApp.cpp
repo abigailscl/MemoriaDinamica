@@ -3,12 +3,32 @@
 
 #include <iostream>
 #include "Matrix.h"
+#include "IngresoDatos.h"
+#include "OperationMatrix.h"
 
 using namespace std;
 
 int main()
 {
+    int dimension;
+    IngresoDatos enter;
+
+    do {
+        dimension = atoi(enter.ingresar().c_str());
+    } while (dimension > 5);
+
+    Matrix matrix(dimension);
+
+    int times;
+    do {
+        times = atoi(enter.ingresar("Ingrese el número de veces que desea multiplicar: ").c_str());
+    } while (times > 7);
+    OperationMatrix operation;
     
+    matrix.fill();
+    matrix.print();
+    operation.multiplySameMatrix(matrix, times).print();
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
