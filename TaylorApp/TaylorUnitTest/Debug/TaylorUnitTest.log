@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  TaylorUnitTest.cpp
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\Trigonometry.h(27,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\Trigonometry.h(34,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\TaylorApp\Trigonometry.h(28): warning C4717: 'Trigonometry::sin': recursive on all control paths, function will cause runtime stack overflow
+     Creating library C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\Debug\TaylorUnitTest.lib and object C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\Debug\TaylorUnitTest.exp
+  TaylorUnitTest.vcxproj -> C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\TaylorApp\Debug\TaylorUnitTest.dll
