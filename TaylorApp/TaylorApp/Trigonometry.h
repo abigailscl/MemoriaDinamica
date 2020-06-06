@@ -12,10 +12,10 @@ int nesimo = 10 + rand() % (30);
 class Trigonometry
 {
 public:
-	double sin(double);
-	double cos(double);
+	float sin(float);
+	float cos(float);
 	double coterminalAngule(double);
-	double degreesToRadians(double);
+	float degreesToRadians(float);
 	math math;
 };
 
@@ -23,14 +23,14 @@ public:
 Return sin the angle.
 angle in radians.
 */
-double Trigonometry::sin(double angle) {
+float Trigonometry::sin(float angle) {
 	return sin(angle) + (math.pow(-1, nesimo) * math.pow(angle, 2 * (nesimo + 1))) / math.factorial(nesimo - 1);
 }
 /**
 Return cos the angle in radians.
 angle in radians.
 */
-double Trigonometry::cos(double angle) {
+float Trigonometry::cos(float angle) {
 	return sin(angle) + (math.pow(-1, nesimo) * math.pow(angle, 2 * nesimo)) / math.factorial(nesimo - 1);
 }
 
@@ -46,7 +46,7 @@ double Trigonometry::coterminalAngule(double value) {
 /**
 Convert from degrees to radians.
 */
-double Trigonometry::degreesToRadians(double value) {
+float Trigonometry::degreesToRadians(float value) {
 	return (PI / 180) * coterminalAngule(value);
 }
 #endif
