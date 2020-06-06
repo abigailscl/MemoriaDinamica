@@ -1,8 +1,7 @@
 ﻿  pch.cpp
   UnidimensionUnitTest.cpp
-C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Validacion.h(32,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Unidimension\Validacion.h(47,13): warning C4101: 'e': unreferenced local variable
-     Creating library C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Debug\UnidimensionUnitTest.lib and object C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Debug\UnidimensionUnitTest.exp
-UnidimensionUnitTest.obj : error LNK2019: unresolved external symbol "public: int __thiscall Operation::mcm(class Unidimensional)" (?mcm@Operation@@QAEHVUnidimensional@@@Z) referenced in function "public: void __thiscall UnidimensionUnitTest::UnidimensionUnitTest::mcmTest(void)" (?mcmTest@UnidimensionUnitTest@1@QAEXXZ)
-UnidimensionUnitTest.obj : error LNK2019: unresolved external symbol "public: __thiscall Operation::Operation(void)" (??0Operation@@QAE@XZ) referenced in function "public: void __thiscall UnidimensionUnitTest::UnidimensionUnitTest::mcmTest(void)" (?mcmTest@UnidimensionUnitTest@1@QAEXXZ)
-C:\Users\Charlie\source\repos\EstructuraDeDatos\Unidimension\Debug\UnidimensionUnitTest.dll : fatal error LNK1120: 2 unresolved externals
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\Unidimension\Unidimension\Validaciones.h(90,13): warning C4101: 'e': unreferenced local variable
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\Unidimension\Unidimension\Operation.h(37,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\Unidimension\Unidimension\Operation.h(52,23): warning C4018: '<': signed/unsigned mismatch
+     Creating library C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\Unidimension\Debug\UnidimensionUnitTest.lib and object C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\Unidimension\Debug\UnidimensionUnitTest.exp
+  UnidimensionUnitTest.vcxproj -> C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\Unidimension\Debug\UnidimensionUnitTest.dll
