@@ -1,4 +1,11 @@
 #pragma once
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE              *
+* CARRERA: Ingenieria de Software                                 *
+* SEMESTRE: Tercer semestre                                       *
+* MATERIA: Estructura de Datos                                    *
+* NRC: 6396                                                       *
+******************************************************************/
 /***********************************************************************
  * Module:  OperationMatrix.h
  * Author:  Charlie
@@ -21,7 +28,12 @@ protected:
 private:
 
 };
-
+////////////////////////////////////////////////////////////////////////
+// Name:      Matrix OperationMatrix::multiplySameMatrix(Matrix matrix, int times) 
+// Purpose:    Implementation of  Matrix OperationMatrix::multiplySameMatrix(Matrix matrix, int times) 
+// Parameters: Matrix matrix, int times
+// Return:     Matrix
+////////////////////////////////////////////////////////////////////////
 Matrix OperationMatrix::multiplySameMatrix(Matrix matrix, int times) {
 
 	Matrix matrixResult(matrix.getDimension());
