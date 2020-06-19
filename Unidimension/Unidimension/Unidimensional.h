@@ -11,102 +11,61 @@
 #define __unidimensional_UML_Unidimensional_h
 
 #include "Unidimensional.h"
-#include "IngresoDatos.h"
+#include "InputData.h"
 #include <iostream>
 #include <sstream>
 #include <stdlib.h>
 
 using namespace std;
 
-class Unidimensional
-{
+template <class T> class Array {
 public:
-    void print();
-    void wax();
+    void print();    
     void fill();    
-    int* getArray(void);
-    void setArray(int* newArray);
-    int getDimension(void);
-    void setDimension(int);
-    Unidimensional(int);
+    T* getArray(void);
+    void setArray(T* newArray);
+    T getDimension(void);
+    void setDimension(T);
+    Array(int);
     
-protected:
 private:
-    int* array;
+    T* array;
     int dimension;
-
-
+    void wax();
 };
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Unidimensional::getArray()
-// Purpose:    Implementation of Unidimensional::getArray()
-// Return:     int*
-////////////////////////////////////////////////////////////////////////
-int* Unidimensional::getArray() { return array; }
-////////////////////////////////////////////////////////////////////////
-// Name:       Unidimensional::setArray(int* newArray)
-// Purpose:    Implementation of Unidimensional::setArray()
-// Parameters:
-// - newArray
-// Return:     void
-////////////////////////////////////////////////////////////////////////
-void Unidimensional::setArray(int* newArray) { array = newArray; }
-////////////////////////////////////////////////////////////////////////
-// Name:       Unidimensional::getDimension()
-// Purpose:    Implementation of Unidimensional::getDimension()
-// Return:     int
-////////////////////////////////////////////////////////////////////////
-int Unidimensional::getDimension() { return dimension; }
-////////////////////////////////////////////////////////////////////////
-// Name:       Unidimensional::setDimension(int newDimension)
-// Purpose:    Implementation of Unidimensional::setDimension()
-// Return:     int
-////////////////////////////////////////////////////////////////////////
-void Unidimensional::setDimension(int newDimension) { dimension = newDimension; }
+template <typename T> T* Array<T>::getArray() { return array; }
 
-/** @fn Unidimensional::Unidimensional(int dimension)
- * @brief Reserve memory for the array
- * @param dimension size of array
- * @return Returns the pointer to the array.
- */
-Unidimensional::Unidimensional(int dimension) {
+template <typename T> void Array<T>::setArray(T* newArray) { array = newArray; }
+
+template <typename T> T Array<T>::getDimension() { return dimension; }
+
+template <typename T> void Array<T>::setDimension(T newDimension) { dimension = newDimension; }
+
+template <typename T> Array<T>::Array(int dimension) {
     this->dimension = dimension;
     array = new int[dimension];
+    wax();
 }
 
-/** @fn Unidimensional::wax(int dimension)
- * @brief wax the array
- * @param dimension size of array
- */
-void Unidimensional::wax() {
+template <typename T> void Array<T>::wax() {
     for (int i = 0; i < getDimension(); i++)
         *(array + i) = 0;
 }
 
-/** @fn Unidimensional::printArray(int dimension)
- * @brief Print the array
- * @param dimension size of array
- */
-void Unidimensional::print() {
+template <typename T> void Array<T>::print() {
     for (int i = 0; i < getDimension(); i++)
         cout << *(array + i);
 }
 
-/** @fn Unidimensional::fillArray(int dimension)
- * @brief fill the array with entered data.
- * @param dimension size of array
- */
-void Unidimensional::fill() {
-    IngresoDatos enter;
+template <typename T> void Array<T>::fill() {
+    InputData<T> enter;
     string str;
-    int value;
-    wax();
+    int value;    
     for (int i = 0; i < getDimension(); i++) {
         value = atoi(enter.ingresar(i).c_str());
-        *(array + i) = value;
+        *(array + i) = value;        
     }
-
 }
 #endif
 
