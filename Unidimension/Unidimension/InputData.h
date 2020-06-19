@@ -24,6 +24,7 @@ public:
 	InputData();    
 	string matrizFloatDouble(int, int);		
     string floatDouble();
+    string realArray(int);
 private:
     Check check;   
     string value;
@@ -40,7 +41,7 @@ private:
 };
 template <>        class InputData<double> {
     InputData();
-    string realArray(int const);
+    string realArray(int);
 private:
     Check check;
     string value;
@@ -67,6 +68,16 @@ template <class T> string InputData<T>::floatDouble(){
  		cin  >> value;
     }
 	return value;
+}
+
+template <class T> string InputData<T>::realArray(int i) {
+    cout << "\nIngrese valor real[" << i << "]: ";
+    cin >> value;
+    while (check.floatDouble(value)) {
+        cout << "\nIngreso erroneo, vuelva a ingresar: ";
+        cin >> value;
+    }
+    return value;
 }
 
 string InputData<int>::integer(string message) {
@@ -99,7 +110,7 @@ string InputData<int>::integerArray(int i) {
     return value;
 }
 
-string InputData<int>::matrizInteger(int const i, int const j) {
+string InputData<int>::matrizInteger(int i, int j) {
  	cout << "\nIngrese valor[" << i << "][" << j << "]: ";
  	cin  >> value;
  	while (check.integer(value)) {
