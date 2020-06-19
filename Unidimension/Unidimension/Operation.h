@@ -14,11 +14,10 @@
 
 using namespace std;
 
-class Operation
-{
+class Operation{
 public:
-    int mcm(Unidimensional array);
-    int mcd(Unidimensional array);
+    template <typename T> T mcm(Array<T> array);
+    template <typename T> T mcd(Array<T> array);
     Operation();
 
 protected:
@@ -32,20 +31,19 @@ Operation::Operation() {}
  * @brief calculate the minimum common multiple
  * @return Returns the minimun common multiple.
  */
-int Operation::mcm(Unidimensional array) {
+template <typename T> T Operation::mcm(Array<T> array) {
 	int aux = 1;
 	for (size_t i = 0; i < array.getDimension(); i++) {
 		aux *= *(array.getArray() + i);
 	}
-
 	return aux / mcd(array);
 }
 
-/** @fn Operation::mcd(Unidimensional array)
+/**@fn Operation::mcd(Unidimensional array)
  * @brief calculate the greatest common divisor
  * @return Returns the greatest common divisor.
  */
-int Operation::mcd(Unidimensional array) {
+template <typename T> T Operation::mcd(Array<T> array) {
 
 	int mcd = 1, remainder, aux;
 
@@ -55,23 +53,18 @@ int Operation::mcd(Unidimensional array) {
 			mcd = aux;
 		}
 		else {
-
 			do {
+
 				remainder = mcd % aux;
 
 				if (remainder != 0) {
 					mcd = aux;
 					aux = remainder;
 				}
-
 			} while (remainder != 0);
 		}
-
 	}
-
 	return mcd;
-
 }
-
 #endif
 
