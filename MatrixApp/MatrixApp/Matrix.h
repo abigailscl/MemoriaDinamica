@@ -17,92 +17,64 @@
 #define __Matrices_Matrix_h
 
 #include "Matrix.h"
-#include "IngresoDatos.h"
-#include <sstream>
+#include "InputData.h"
 #include <iostream>
 #include <stdlib.h>	
 
 using namespace std;
-
-class Matrix{
+template <class T> class Matrix{
 public:
 
     void fill();
     void print();
     void wax();    
-    int** getMatrix(void);
-    void setMatrix(int**);
-    int getDimension();
+    T**  getMatrix(void);
+    void setMatrix(T**);
+    int  getDimension();
     void setDimension(int);
 
     Matrix(int); 
 	~Matrix();
-    
-protected:
   
 private:
-    int **matrix;
+    T **matrix;
     int dimension;
 };
-////////////////////////////////////////////////////////////////////////
-// Name:      gett and setters
-// Purpose:    get and set atributes
-// Parameters: int dimension, int ** matrix
-// Return:     int** void
-////////////////////////////////////////////////////////////////////////
-int** Matrix::getMatrix(void) { return matrix; }
-void Matrix::setMatrix(int** newMatrix) { matrix = newMatrix; }
-int Matrix::getDimension(void) { return dimension; }
-void Matrix::setDimension(int newDimension) { dimension = newDimension; }
 
-////////////////////////////////////////////////////////////////////////
-// Name:      Matrix::Matrix(int dimension)
-// Purpose:    Constructor of Matrix::Matrix(int dimension)
-// Parameters: int dimension
-// Return:     
-////////////////////////////////////////////////////////////////////////
-Matrix::Matrix(int dimension) {
+template <class T> T**  Matrix<T>::getMatrix(void) { return matrix; }
+template <class T> void Matrix<T>::setMatrix(T** matrix) { this->matrix = matrix; }
+template <class T> int  Matrix<T>::getDimension(void) { return dimension; }
+template <class T> void Matrix<T>::setDimension(int dimension) { this->dimension = dimension; }
 
-	IngresoDatos enter;
+template <class T> Matrix<T>::Matrix(int dimension) {
+
 	this->dimension = dimension;
-	matrix = (int**)malloc(dimension * sizeof(int*));
+	matrix = (T**)malloc(dimension * sizeof(T*));
 
 	for (size_t i = 0; i < dimension; i++) {
-		*(matrix + i) = (int*)malloc(dimension * sizeof(int));
+		*(matrix + i) = (T*)malloc(dimension * sizeof(int));
 	}
 
 }
+template <class T> Matrix<T>::~Matrix() {}
 
-Matrix::~Matrix() {}
-////////////////////////////////////////////////////////////////////////
-// Name:      void Matrix::fill()
-// Purpose:    Implementation of  void Matrix::fill()
-// Parameters: 
-// Return:    void
-////////////////////////////////////////////////////////////////////////
-void Matrix::fill() {
+template <class T> void Matrix<T>::fill() {
 
 	string str;
-	IngresoDatos enter;
+	InputData<T> enter;
 	int value;
 	wax();
 	for (size_t i = 0; i < getDimension(); i++) {
 		for (size_t j = 0; j < getDimension(); j++) {
-			value = atoi(enter.ingresar(i, j).c_str());
+			value = atoi(enter.matrizInteger(i, j).c_str());
 			*(*(getMatrix() + i) + j) = value;
 		}
 	}
 
 }
-////////////////////////////////////////////////////////////////////////
-// Name:       Matrix::print()
-// Purpose:    Implementation of  void Matrix::print()
-// Parameters: 
-// Return:    void
-////////////////////////////////////////////////////////////////////////
-void Matrix::print() {
+template <class T> void Matrix<T>::print() {
 
-	cout << "Matriz resultante:\n";
+	cout << "\nMatriz resultante:\n";
 
 	for (size_t i = 0; i < getDimension(); i++) {
 		for (size_t j = 0; j < getDimension(); j++) {
@@ -112,19 +84,12 @@ void Matrix::print() {
 	}
 
 }
-////////////////////////////////////////////////////////////////////////
-// Name:      Matrix::wax() 
-// Purpose:    Implementation of  void Matrix::wax() 
-// Parameters: 
-// Return:    void
-////////////////////////////////////////////////////////////////////////
-void Matrix::wax() {
+template <class T> void Matrix<T>::wax() {
 
 	for (size_t i = 0; i < getDimension(); i++)
 		for (size_t j = 0; j < getDimension(); j++)
 			*(*(getMatrix() + i) + j) = 0;
 
 }
-
 #endif
 
