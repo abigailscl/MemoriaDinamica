@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Matrix: Fichero Fuente Matrix.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Matrix
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Matriz dinámica</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Matrix.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_matrix_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/******************************************************************</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE              *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* CARRERA: Ingenieria de Software                                 *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">* SEMESTRE: Tercer semestre                                       *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">* MATERIA: Estructura de Datos                                    *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">* NRC: 6396                                                       *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">******************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/***********************************************************************</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Module:  Matrix.h</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * Author:  Carlos Romero </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Modified: Monday, June 1, 2020 15:51:29</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Purpose: Declaration of the class Matrix</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> ***********************************************************************/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if !defined(__Matrices_Matrix_h)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define __Matrices_Matrix_h</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_matrix_8h.html#a24afd595b52ce35383a7dffd7d318643">   18</a></span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_matrix_8h.html">Matrix.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_input_data_8h.html">InputData.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_matrix.html">   26</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="class_matrix.html">Matrix</a>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> fill();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> print();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> wax();    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    T**  getMatrix(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> setMatrix(T**);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span>  getDimension();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> setDimension(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_matrix.html">Matrix</a>(<span class="keywordtype">int</span>); </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="class_matrix.html">Matrix</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    T **matrix;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> dimension;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html">   45</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span><a class="code" href="class_matrix.html">Matrix</a>&lt;int&gt; {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> fill();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> wax();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> print();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span>** getMatrix(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> setMatrix(<span class="keywordtype">int</span>**);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span>  getDimension();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> setDimension(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_matrix.html">Matrix</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ~<a class="code" href="class_matrix.html">Matrix</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span>** matrix;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> dimension;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html">   61</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span><a class="code" href="class_matrix.html">Matrix</a>&lt;double&gt; {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> fill();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> wax();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> print();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">double</span>** getMatrix(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setMatrix(<span class="keywordtype">double</span>**);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span>  getDimension();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> setDimension(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_matrix.html">Matrix</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ~<a class="code" href="class_matrix.html">Matrix</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">double</span>** matrix;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> dimension;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_matrix.html#a86dfdda07c1c94f2d8bdc4181db485c7">   81</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; T**  <a class="code" href="class_matrix.html#a86dfdda07c1c94f2d8bdc4181db485c7">Matrix&lt;T&gt;::getMatrix</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> matrix; }</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_matrix.html#af75955280ac54852dfd44f6a40046656">   87</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="class_matrix.html#af75955280ac54852dfd44f6a40046656">Matrix&lt;T&gt;::setMatrix</a>(T** matrix) { this-&gt;matrix = matrix; }</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_matrix.html#ad75733cd74a1b077a1e1d4eca22715e2">   93</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">int</span>  <a class="code" href="class_matrix.html#ad75733cd74a1b077a1e1d4eca22715e2">Matrix&lt;T&gt;::getDimension</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> dimension; }</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_matrix.html#ad0b41f76f9c45efed7c2a5ae3dbd025b">   99</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="class_matrix.html#ad0b41f76f9c45efed7c2a5ae3dbd025b">Matrix&lt;T&gt;::setDimension</a>(<span class="keywordtype">int</span> dimension) { this-&gt;dimension = dimension; }</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#ae90b2c577126bd1b173d7bc724d321a8">  105</a></span>&#160;<span class="keywordtype">int</span>**       <a class="code" href="class_matrix.html#a86dfdda07c1c94f2d8bdc4181db485c7">Matrix&lt;int&gt;::getMatrix</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> this-&gt;matrix = matrix; }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#afe7ca47a763d127bc3b083c6e96a3b06">  111</a></span>&#160;<span class="keywordtype">void</span>        <a class="code" href="class_matrix.html#af75955280ac54852dfd44f6a40046656">Matrix&lt;int&gt;::setMatrix</a>(<span class="keywordtype">int</span>** matrix) { this-&gt;matrix = matrix; }</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#a817fffc628bdba99e08af39016a0f20e">  117</a></span>&#160;<span class="keywordtype">int</span>         <a class="code" href="class_matrix.html#ad75733cd74a1b077a1e1d4eca22715e2">Matrix&lt;int&gt;::getDimension</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> dimension; }</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#a3dc7dc111cf1ec63ec7581065c27d572">  123</a></span>&#160;<span class="keywordtype">void</span>        <a class="code" href="class_matrix.html#ad0b41f76f9c45efed7c2a5ae3dbd025b">Matrix&lt;int&gt;::setDimension</a>(<span class="keywordtype">int</span> dimension) { this-&gt;dimension = dimension; }</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#a3df79406fdcac593b5c0e17cfa46a194">  129</a></span>&#160;<span class="keywordtype">double</span>**    <a class="code" href="class_matrix.html#a86dfdda07c1c94f2d8bdc4181db485c7">Matrix&lt;double&gt;::getMatrix</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> this-&gt;matrix = matrix; }</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#af06f0d2953389c428c0662bb8ee4e900">  135</a></span>&#160;<span class="keywordtype">void</span>        <a class="code" href="class_matrix.html#af75955280ac54852dfd44f6a40046656">Matrix&lt;double&gt;::setMatrix</a>(<span class="keywordtype">double</span>** matrix) { this-&gt;matrix = matrix; }</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#a00c8d05acc95d6c735fb53d1c832cd2f">  141</a></span>&#160;<span class="keywordtype">int</span>         <a class="code" href="class_matrix.html#ad75733cd74a1b077a1e1d4eca22715e2">Matrix&lt;double&gt;::getDimension</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> dimension; }</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#a4c1c33bd6b26e4ca0e8d8c55ab014ea2">  147</a></span>&#160;<span class="keywordtype">void</span>        <a class="code" href="class_matrix.html#ad0b41f76f9c45efed7c2a5ae3dbd025b">Matrix&lt;double&gt;::setDimension</a>(<span class="keywordtype">int</span> dimension) { this-&gt;dimension = dimension; }</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="class_matrix.html#ad49f0060c68e71cdda695406d6f229f8">  152</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <a class="code" href="class_matrix.html#ad49f0060c68e71cdda695406d6f229f8">Matrix&lt;T&gt;::Matrix</a>(<span class="keywordtype">int</span> dimension) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    this-&gt;dimension = dimension;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    matrix = (T**)malloc(dimension * <span class="keyword">sizeof</span>(T*));</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        *(matrix + i) = (T*)malloc(dimension * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_matrix.html#a91aa704de674203e96aece9e1955ccd3">  166</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <a class="code" href="class_matrix.html#a91aa704de674203e96aece9e1955ccd3">Matrix&lt;T&gt;::~Matrix</a>() {}</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#ac67a4489a066ee538ff763b5226fef30">  171</a></span>&#160;<a class="code" href="class_matrix.html#ad49f0060c68e71cdda695406d6f229f8">Matrix&lt;int&gt;::Matrix</a>(<span class="keywordtype">int</span> dimension) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    this-&gt;dimension = dimension;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    matrix = (<span class="keywordtype">int</span>**)malloc(dimension * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>*));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        *(matrix + i) = (<span class="keywordtype">int</span>*)malloc(dimension * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#a50d845d7167c674abe3dd345fb2f26c2">  185</a></span>&#160;<a class="code" href="class_matrix.html#a91aa704de674203e96aece9e1955ccd3">Matrix&lt;int&gt;::~Matrix</a>() {}</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#a3ad97dc83c8699857a538a87c6a9f2ef">  190</a></span>&#160;<a class="code" href="class_matrix.html#ad49f0060c68e71cdda695406d6f229f8">Matrix&lt;double&gt;::Matrix</a>(<span class="keywordtype">int</span> dimension) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    this-&gt;dimension = dimension;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    matrix = (<span class="keywordtype">double</span>**)malloc(dimension * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>*));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dimension; i++) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        *(matrix + i) = (<span class="keywordtype">double</span>*)malloc(dimension * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#a01cff31d5299e182fd64582ef0488cef">  204</a></span>&#160;<a class="code" href="class_matrix.html#a91aa704de674203e96aece9e1955ccd3">Matrix&lt;double&gt;::~Matrix</a>() {}</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_matrix.html#a6f1cf397e39f8069ac2784fe32468182">  208</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="class_matrix.html#a6f1cf397e39f8069ac2784fe32468182">Matrix&lt;T&gt;::fill</a>() {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">string</span> str;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="class_input_data_3_01double_01_4.html">InputData&lt;double&gt;</a> enter;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    wax();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            value = atoi(enter.<a class="code" href="class_input_data_3_01double_01_4.html#aad2e8d9641c28a34ea688e991feb43e0">matrixFloatDouble</a>(i, j).c_str());</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            *(*(getMatrix() + i) + j) = value;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_matrix.html#ad13471b4c864eec5335ad1eb70cb85f4">  222</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="class_matrix.html#ad13471b4c864eec5335ad1eb70cb85f4">Matrix&lt;T&gt;::print</a>() {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\nMatriz resultante:\n&quot;</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++) {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            cout &lt;&lt; *(*(getMatrix() + i) + j) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="class_matrix.html#a8cae58d57c3acbc3754ea3bd2560a3da">  235</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="class_matrix.html#a8cae58d57c3acbc3754ea3bd2560a3da">Matrix&lt;T&gt;::wax</a>() {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            *(*(getMatrix() + i) + j) = 0;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#ae7da342da99e4fae73c846e4fd19e7f4">  243</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_matrix.html#a6f1cf397e39f8069ac2784fe32468182">Matrix&lt;int&gt;::fill</a>() {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">string</span> str;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="class_input_data_3_01int_01_4.html">InputData&lt;int&gt;</a> enter;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    wax();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++) {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            value = atoi(enter.<a class="code" href="class_input_data_3_01int_01_4.html#a5a46efb6a203561e1134dfd805b8bb29">matrixInteger</a>(i, j).c_str());</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            *(*(getMatrix() + i) + j) = value;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#afd2a367c995d2e88ca1134b2ae147a2c">  257</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_matrix.html#ad13471b4c864eec5335ad1eb70cb85f4">Matrix&lt;int&gt;::print</a>() {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\nMatriz resultante:\n&quot;</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            cout &lt;&lt; *(*(getMatrix() + i) + j) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="class_matrix_3_01int_01_4.html#a9dd35f385c8cc7cd9dbe20380a0b2ef9">  269</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_matrix.html#a8cae58d57c3acbc3754ea3bd2560a3da">Matrix&lt;int&gt;::wax</a>() {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++)</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            *(*(getMatrix() + i) + j) = 0;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#ac0656daa2950559f8037a86b849c9e9d">  277</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_matrix.html#a6f1cf397e39f8069ac2784fe32468182">Matrix&lt;double&gt;::fill</a>() {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">string</span> str;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="class_input_data_3_01double_01_4.html">InputData&lt;double&gt;</a> enter;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    wax();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++) {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            value = atoi(enter.<a class="code" href="class_input_data_3_01double_01_4.html#aad2e8d9641c28a34ea688e991feb43e0">matrixFloatDouble</a>(i, j).c_str());</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            *(*(getMatrix() + i) + j) = value;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#a2d1e3c8e684ec243deb86cec19d43cbc">  291</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_matrix.html#ad13471b4c864eec5335ad1eb70cb85f4">Matrix&lt;double&gt;::print</a>() {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\nMatriz resultante:\n&quot;</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++) {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            cout &lt;&lt; *(*(getMatrix() + i) + j) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="class_matrix_3_01double_01_4.html#ac7bf53db066ac2bf620d0497cfcb9a93">  303</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_matrix.html#a8cae58d57c3acbc3754ea3bd2560a3da">Matrix&lt;double&gt;::wax</a>() {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; getDimension(); i++)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; getDimension(); j++)</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            *(*(getMatrix() + i) + j) = 0;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_matrix_html_af75955280ac54852dfd44f6a40046656"><div class="ttname"><a href="class_matrix.html#af75955280ac54852dfd44f6a40046656">Matrix::setMatrix</a></div><div class="ttdeci">void setMatrix(T **)</div><div class="ttdoc">set</div><div class="ttdef"><b>Definition:</b> Matrix.h:87</div></div>
+<div class="ttc" id="aclass_matrix_html_ad49f0060c68e71cdda695406d6f229f8"><div class="ttname"><a href="class_matrix.html#ad49f0060c68e71cdda695406d6f229f8">Matrix::Matrix</a></div><div class="ttdeci">Matrix(int)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> Matrix.h:152</div></div>
+<div class="ttc" id="aclass_matrix_html_ad13471b4c864eec5335ad1eb70cb85f4"><div class="ttname"><a href="class_matrix.html#ad13471b4c864eec5335ad1eb70cb85f4">Matrix::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Imprime la matriz.</div><div class="ttdef"><b>Definition:</b> Matrix.h:222</div></div>
+<div class="ttc" id="aclass_matrix_html_a86dfdda07c1c94f2d8bdc4181db485c7"><div class="ttname"><a href="class_matrix.html#a86dfdda07c1c94f2d8bdc4181db485c7">Matrix::getMatrix</a></div><div class="ttdeci">T ** getMatrix(void)</div><div class="ttdoc">get</div><div class="ttdef"><b>Definition:</b> Matrix.h:81</div></div>
+<div class="ttc" id="aclass_matrix_html_ad75733cd74a1b077a1e1d4eca22715e2"><div class="ttname"><a href="class_matrix.html#ad75733cd74a1b077a1e1d4eca22715e2">Matrix::getDimension</a></div><div class="ttdeci">int getDimension()</div><div class="ttdoc">get</div><div class="ttdef"><b>Definition:</b> Matrix.h:93</div></div>
+<div class="ttc" id="aclass_input_data_3_01double_01_4_html"><div class="ttname"><a href="class_input_data_3_01double_01_4.html">InputData&lt; double &gt;</a></div><div class="ttdef"><b>Definition:</b> InputData.h:39</div></div>
+<div class="ttc" id="aclass_matrix_html_a91aa704de674203e96aece9e1955ccd3"><div class="ttname"><a href="class_matrix.html#a91aa704de674203e96aece9e1955ccd3">Matrix::~Matrix</a></div><div class="ttdeci">~Matrix()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> Matrix.h:166</div></div>
+<div class="ttc" id="aclass_input_data_3_01int_01_4_html"><div class="ttname"><a href="class_input_data_3_01int_01_4.html">InputData&lt; int &gt;</a></div><div class="ttdef"><b>Definition:</b> InputData.h:29</div></div>
+<div class="ttc" id="aclass_matrix_html_ad0b41f76f9c45efed7c2a5ae3dbd025b"><div class="ttname"><a href="class_matrix.html#ad0b41f76f9c45efed7c2a5ae3dbd025b">Matrix::setDimension</a></div><div class="ttdeci">void setDimension(int)</div><div class="ttdoc">set</div><div class="ttdef"><b>Definition:</b> Matrix.h:99</div></div>
+<div class="ttc" id="aclass_matrix_html_a6f1cf397e39f8069ac2784fe32468182"><div class="ttname"><a href="class_matrix.html#a6f1cf397e39f8069ac2784fe32468182">Matrix::fill</a></div><div class="ttdeci">void fill()</div><div class="ttdoc">LLena la matriz con un tipo de dato generico.</div><div class="ttdef"><b>Definition:</b> Matrix.h:208</div></div>
+<div class="ttc" id="a_matrix_8h_html"><div class="ttname"><a href="_matrix_8h.html">Matrix.h</a></div></div>
+<div class="ttc" id="aclass_input_data_3_01double_01_4_html_aad2e8d9641c28a34ea688e991feb43e0"><div class="ttname"><a href="class_input_data_3_01double_01_4.html#aad2e8d9641c28a34ea688e991feb43e0">InputData&lt; double &gt;::matrixFloatDouble</a></div><div class="ttdeci">string matrixFloatDouble(int, int)</div><div class="ttdef"><b>Definition:</b> InputData.h:101</div></div>
+<div class="ttc" id="a_input_data_8h_html"><div class="ttname"><a href="_input_data_8h.html">InputData.h</a></div></div>
+<div class="ttc" id="aclass_matrix_html"><div class="ttname"><a href="class_matrix.html">Matrix</a></div><div class="ttdoc">Plantilla generica.</div><div class="ttdef"><b>Definition:</b> Matrix.h:26</div></div>
+<div class="ttc" id="aclass_matrix_html_a8cae58d57c3acbc3754ea3bd2560a3da"><div class="ttname"><a href="class_matrix.html#a8cae58d57c3acbc3754ea3bd2560a3da">Matrix::wax</a></div><div class="ttdeci">void wax()</div><div class="ttdoc">encera la matriz</div><div class="ttdef"><b>Definition:</b> Matrix.h:235</div></div>
+<div class="ttc" id="aclass_input_data_3_01int_01_4_html_a5a46efb6a203561e1134dfd805b8bb29"><div class="ttname"><a href="class_input_data_3_01int_01_4.html#a5a46efb6a203561e1134dfd805b8bb29">InputData&lt; int &gt;::matrixInteger</a></div><div class="ttdeci">string matrixInteger(int, int)</div><div class="ttdef"><b>Definition:</b> InputData.h:82</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
