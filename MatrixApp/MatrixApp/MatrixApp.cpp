@@ -16,27 +16,27 @@
 
 #include <iostream>
 #include "Matrix.h"
-#include "IngresoDatos.h"
+#include "InputData.h"
 #include "OperationMatrix.h"
 
 using namespace std;
 
-int main()
-{
+int main() {
     int dimension;
-    IngresoDatos enter;
+    InputData<int> enter;
 
     do {
-        dimension = atoi(enter.ingresar().c_str());
+        dimension = atoi(enter.integer("Ingrese la dimension: ").c_str());
     } while (dimension > 5);
 
-    Matrix matrix(dimension);
+    Matrix<double> matrix(dimension);
 
     int times;
     do {
-        times = atoi(enter.ingresar("Ingrese el número de veces que desea multiplicar: ").c_str());
+        times = atoi(enter.integer("Ingrese el numero de veces que desea multiplicar: ").c_str());
     } while (times > 7);
-    OperationMatrix operation;
+
+    OperationMatrix<double> operation;
     
     matrix.fill();
     matrix.print();
