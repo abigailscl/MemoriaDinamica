@@ -17,17 +17,21 @@
 #define __OperationMatrix_h
 
 #include "Matrix.h"
-
+/**@brief Plantilla generica*/
 template <class T> class OperationMatrix {
 public:
-    Matrix<T> multiplySameMatrix(Matrix<T>, int);
-	OperationMatrix();
+	
+    Matrix<T> multiplySameMatrix(Matrix<T>, int);	
+	OperationMatrix();	
 	~OperationMatrix();
 };
-
+/**@brief Constructor*/
 template <class T> OperationMatrix<T>::OperationMatrix(){}
+/**@brief Destructor*/
 template <class T> OperationMatrix<T>::~OperationMatrix(){}
-
+/**@brief Realiza la multiplicación de la misma matriz
+		@param matrix generica, número de veces a realizar la multiplicación.
+	*/
 template <class T> Matrix<T> OperationMatrix<T>::multiplySameMatrix(Matrix<T> matrix, int times) {
 
 	Matrix<T> matrixResult(matrix.getDimension());
