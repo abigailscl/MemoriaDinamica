@@ -1,14 +1,19 @@
 ﻿  MatrixApp.cpp
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\Validacion.h(32,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\Validacion.h(47,13): warning C4101: 'e': unreferenced local variable
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(18,30): error C3646: 'multiplySameMatrix': unknown override specifier
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(18,30): error C2059: syntax error: '('
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(18,43): error C2238: unexpected token(s) preceding ';'
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(25,25): error C2039: 'multiplySameMatrix': is not a member of 'OperationMatrix'
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(15): message : see declaration of 'OperationMatrix'
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(25,43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(25,43): error C2146: syntax error: missing ';' before identifier 'multiplySameMatrix'
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(25,70): error C2143: syntax error: missing ';' before '{'
-C:\Users\Charlie\source\repos\EstructuraDeDatos\MatrixApp\MatrixApp\OperationMatrix.h(25,70): error C2447: '{': missing function header (old-style formal list?)
-  OperationMatrix.cpp
-  Generating Code...
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Check.h(62,13): warning C4101: 'e': unreferenced local variable
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Check.h(83,13): warning C4101: 'e': unreferenced local variable
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Check.h(100,13): warning C4101: 'e': unreferenced local variable
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(105,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(116,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(161,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(162,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(172,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(173,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(181,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(182,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(192,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(193,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(203,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(204,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(212,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\MatrixApp\Matrix.h(213,24): warning C4018: '<': signed/unsigned mismatch
+  MatrixApp.vcxproj -> C:\Users\Charlie\source\repos\EstructuraDeDatos\MemoriaDinamica\MatrixApp\Debug\MatrixApp.exe
