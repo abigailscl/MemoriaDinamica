@@ -13,30 +13,24 @@
  * Purpose: Declaration of the class OperationMatrix
  ***********************************************************************/
 
-#if !defined(__Matrices_OperationMatrix_h)
-#define __Matrices_OperationMatrix_h
+#if !defined(__OperationMatrix_h)
+#define __OperationMatrix_h
 
-#include "OperationMatrix.h"
 #include "Matrix.h"
 
-class OperationMatrix
-{
+template <class T> class OperationMatrix {
 public:
-    Matrix multiplySameMatrix(Matrix, int);
-	
-protected:
-private:
-
+    Matrix<T> multiplySameMatrix(Matrix<T>, int);
+	OperationMatrix();
+	~OperationMatrix();
 };
-////////////////////////////////////////////////////////////////////////
-// Name:      Matrix OperationMatrix::multiplySameMatrix(Matrix matrix, int times) 
-// Purpose:    Implementation of  Matrix OperationMatrix::multiplySameMatrix(Matrix matrix, int times) 
-// Parameters: Matrix matrix, int times
-// Return:     Matrix
-////////////////////////////////////////////////////////////////////////
-Matrix OperationMatrix::multiplySameMatrix(Matrix matrix, int times) {
 
-	Matrix matrixResult(matrix.getDimension());
+template <class T> OperationMatrix<T>::OperationMatrix(){}
+template <class T> OperationMatrix<T>::~OperationMatrix(){}
+
+template <class T> Matrix<T> OperationMatrix<T>::multiplySameMatrix(Matrix<T> matrix, int times) {
+
+	Matrix<T> matrixResult(matrix.getDimension());
 	matrixResult.wax();
 	if (times == 1) {
 		matrixResult = matrix;
@@ -57,5 +51,4 @@ Matrix OperationMatrix::multiplySameMatrix(Matrix matrix, int times) {
 
 	return matrixResult;
 }
-
 #endif
