@@ -22,8 +22,6 @@ using namespace std;
 template <class T> class InputData{
 public:
 	InputData();    
-	string matrizFloatDouble(int, int);		
-    string floatDouble();
 private:
     Check check;   
     string value;
@@ -33,14 +31,16 @@ public:
     string integer(string);
     string positiveInteger(string);
     string integerArray(int);    
-    string matrizInteger(int, int);
+    string matrixInteger(int, int);
 private:
     Check check;
     string value;
 };
 template <>        class InputData<double> {
-    InputData();
-    string realArray(int const);
+public:
+    string realArray(int);
+    string matrixFloatDouble(int, int);
+    string floatDouble();
 private:
     Check check;
     string value;
@@ -48,26 +48,6 @@ private:
 
 ///Construtor
 template <class T> InputData<T>::InputData(){}
-
-template <class T> string InputData<T>::matrizFloatDouble(int i, int j) {
-    cout << "\nIngrese valor[" << i << "][" << j << "]: ";
-    cin >> value;
-    while (check.floatDouble(value)) {
-        cout << "\nIngreso erroneo, vuelva a ingresar: ";
-        cin >> value;
-    }
-    return value;
-}
-
-template <class T> string InputData<T>::floatDouble(){ 	
- 	cout << "\nIngrese valor real:  ";
- 	cin  >> value;
- 	while (check.floatDouble(value)) {
- 		cout << "\nIngreso erroneo, vuelva a ingresar: ";
- 		cin  >> value;
-    }
-	return value;
-}
 
 string InputData<int>::integer(string message) {
     cout << message;
@@ -99,7 +79,7 @@ string InputData<int>::integerArray(int i) {
     return value;
 }
 
-string InputData<int>::matrizInteger(int const i, int const j) {
+string InputData<int>::matrixInteger(int const i, int const j) {
  	cout << "\nIngrese valor[" << i << "][" << j << "]: ";
  	cin  >> value;
  	while (check.integer(value)) {
@@ -111,6 +91,25 @@ string InputData<int>::matrizInteger(int const i, int const j) {
 
 string InputData<double>::realArray(int i) {
     cout << "\nIngrese valor real[" << i << "]: ";
+    cin >> value;
+    while (check.floatDouble(value)) {
+        cout << "\nIngreso erroneo, vuelva a ingresar: ";
+        cin >> value;
+    }
+    return value;
+}
+string InputData<double>::matrixFloatDouble(int i, int j) {
+    cout << "\nIngrese valor[" << i << "][" << j << "]: ";
+    cin >> value;
+    while (check.floatDouble(value)) {
+        cout << "\nIngreso erroneo, vuelva a ingresar: ";
+        cin >> value;
+    }
+    return value;
+}
+
+string InputData<double>::floatDouble() {
+    cout << "\nIngrese valor real:  ";
     cin >> value;
     while (check.floatDouble(value)) {
         cout << "\nIngreso erroneo, vuelva a ingresar: ";

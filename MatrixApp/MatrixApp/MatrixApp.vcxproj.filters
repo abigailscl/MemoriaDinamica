@@ -29,9 +29,6 @@
     <ClInclude Include="Matrix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Validacion.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="OperationMatrix.h">
       <Filter>Header Files</Filter>
     </ClInclude>

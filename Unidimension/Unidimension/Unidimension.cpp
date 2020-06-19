@@ -17,7 +17,7 @@ int main()
 
     dimension = atoi(enter.ingresar().c_str());
     
-    Unidimensional arr(dimension);
+    Array<int> arr(dimension);
             
     arr.fill();
     arr.print();
