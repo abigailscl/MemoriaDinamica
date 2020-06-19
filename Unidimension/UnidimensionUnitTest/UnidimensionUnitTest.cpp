@@ -13,7 +13,7 @@ namespace UnidimensionUnitTest
 		
 		TEST_METHOD(mcmTest)
 		{
-			Unidimensional arr(4);
+			Array arr(4);
 			Operation op;
 
 			for (int i = 0; i < arr.getDimension(); i++)
@@ -21,7 +21,7 @@ namespace UnidimensionUnitTest
 			
 			Assert::AreEqual(8, op.mcm(arr));
 
-			Unidimensional arr2(3);
+			Array arr2(3);
 
 			*(arr2.getArray()) = 2;			
 			*(arr2.getArray() + 1) = 3;
@@ -32,7 +32,7 @@ namespace UnidimensionUnitTest
 
 		TEST_METHOD(mcdTest) {
 
-			Unidimensional arr(4);
+			Array arr(4);
 			Operation op;
 
 			for (int i = 0; i < arr.getDimension(); i++)
@@ -40,7 +40,7 @@ namespace UnidimensionUnitTest
 
 			Assert::AreEqual(2, op.mcd(arr));
 
-			Unidimensional arr2(3);
+			Array arr2(3);
 
 			*(arr2.getArray()) = 2;
 			*(arr2.getArray() + 1) = 3;
